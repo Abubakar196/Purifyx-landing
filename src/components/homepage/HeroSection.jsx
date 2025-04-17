@@ -26,7 +26,7 @@ const HeroSection = () => {
                 Request Demo
               </Button>
               <Button
-                className="bg-primary-500 hover:bg-primary-500/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white"
+                className="bg-primary-500 hover:bg-primary-500/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer"
                 size="lg"
               >
                 Sign Up

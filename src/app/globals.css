@@ -141,3 +141,27 @@
   pointer-events: none;
 }
 
+@layer components {
+  .B1 {
+    @apply text-[18px] leading-[27px] font-medium text-text-color;
+  }
+  .B2 {
+    @apply text-base font-medium text-text-color;
+  }
+  .B3 {
+    @apply text-[14px] leading-[21px] font-medium text-text-color;
+  }
+  .H3 {
+    @apply text-[36px] leading-[42px] md:text-[48px] md:leading-[55px] xl:text-[46px] xl:leading-[69px] font-semibold text-text-color;
+  }
+  .H7 {
+    @apply text-[22px] leading-[33px] font-semibold text-text-color;
+  }
+  .Heading2 {
+    @apply text-[30px] leading-[36px] md:text-[48px] md:leading-[55px] xl:text-[56px] xl:leading-[84px] font-semibold text-text-color;
+  }
+  .Heading3 {
+    @apply text-[30px] leading-[36px] font-semibold text-text-color;
+  }
+}
+

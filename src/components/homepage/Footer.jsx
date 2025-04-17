@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-[#E9EAEB] px-4 sm:px-6 lg:px-[128px] py-4 sm:py-[20px] flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="border-t border-[#E9EAEB] px-4 md:px-6 xl:px-8 2xl:px-0 py-4 sm:py-[20px] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-[#636777] text-sm sm:text-base text-center sm:text-left">
             PurifyX © All rights reserved
           </p>

@@ -150,10 +150,10 @@ export const Pricing = () => {
           className="aspect-[1] object-contain w-[15px] self-stretch shrink-0 my-auto"
           alt=""
         />
-        <div className="self-stretch flex-1 shrink basis-[0%] my-auto">
+        <div className="self-stretch flex-1 shrink basis-[0%] my-auto text-[14px] leading-tight font-normal">
           {text}
           {subtext && (
-            <span className="text-[rgba(135,143,157,1)]"> {subtext}</span>
+            <span className="text-[rgba(135,143,157,1)] text-[14px] leading-tight font-normal"> {subtext}</span>
           )}
         </div>
       </div>

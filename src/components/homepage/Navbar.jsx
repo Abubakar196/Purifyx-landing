@@ -39,24 +39,26 @@ const Navbar = () => {
         <div className="mx-auto max-w-[1300px] px-4 md:px-6 xl:px-8 2xl:px-0">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
+             <Link href="/" className="cursor-pointer">
             <div className="flex items-center gap-2">
               <Image
                 src="/Logo.svg"
                 alt="PurifyX Logo"
                 width={120}
-                height={36}
-                className="w-[120px]"
+                height={40}
+                className="w-[150px] min-h-[60px]"
               />
             </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center justify-between w-full">
               <div className="flex items-center gap-8 mx-auto">
                 <Link href="/" className="text-text-color font-semibold text-[16px] leading-[150%] hover:text-gray-900">
-                  Link One
+                  Home
                 </Link>
-                <Link href="/" className="text-text-color font-semibold text-[16px] leading-[150%] hover:text-gray-900">
-                  Link Two
+                <Link href="/contact-us" className="text-text-color font-semibold text-[16px] leading-[150%] hover:text-gray-900">
+                  Contact Us
                 </Link>
                 <Link href="/" className="text-text-color font-semibold text-[16px] leading-[150%] hover:text-gray-900">
                   Link Three
@@ -75,7 +77,7 @@ const Navbar = () => {
                   Request Demo
                 </Button>
                 <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white">Sign Up</Button>
+                  <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer">Sign Up</Button>
                 </a>
               </div>
             </div>
@@ -83,7 +85,7 @@ const Navbar = () => {
             {/* Mobile CTA Buttons and Menu Toggle */}
             <div className="flex items-center gap-4 lg:hidden">
               <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white">Sign Up</Button>
+                <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer">Sign Up</Button>
               </a>
               <button className="flex items-center justify-center" onClick={toggleMobileMenu} aria-label="Toggle menu">
                 {mobileMenuOpen ? <X className="h-6 w-6 text-text-color" /> : <Menu className="h-6 w-6 text-gray-600" />}
