@@ -18,19 +18,23 @@ const HeroSection = () => {
                 Grow your pipeline faster than ever.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 w-full sm:w-auto px-4">
+            <div className="flex flex-row justify-center items-center gap-3 w-full sm:w-auto px-4">
+            <a href="https://app.purifyx.ai/signin" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
-                className="text-text-color py-2 px-5 border border-text-color rounded-sm text-[16px] leading-[150%] bg-none"
+                className="text-text-color py-2 px-5 border border-text-color rounded-sm text-[16px] leading-[150%] bg-none cursor-pointer"
               >
-                Request Demo
+                Login
               </Button>
+              </a>
+              <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
               <Button
                 className="bg-primary-500 hover:bg-primary-500/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer"
                 size="lg"
               >
                 Sign Up
               </Button>
+              </a>
             </div>
           </div>
 

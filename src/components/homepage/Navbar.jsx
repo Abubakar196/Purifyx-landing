@@ -73,9 +73,11 @@ const Navbar = () => {
 
               {/* Desktop CTA Buttons */}
               <div className="flex items-center gap-4">
-                <Button className="hidden sm:inline-flex text-text-color py-2 px-5 border border-text-color rounded-sm text-[16px] leading-[150%]">
-                  Request Demo
+              <a href="https://app.purifyx.ai/signin" target="_blank" rel="noopener noreferrer">
+                <Button className="hidden sm:inline-flex text-text-color py-2 px-5 border border-text-color rounded-sm text-[16px] leading-[150%] cursor-pointer">
+                  Login
                 </Button>
+                </a>
                 <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer">Sign Up</Button>
                 </a>
@@ -85,7 +87,7 @@ const Navbar = () => {
             {/* Mobile CTA Buttons and Menu Toggle */}
             <div className="flex items-center gap-4 lg:hidden">
               <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-5 text-white cursor-pointer">Sign Up</Button>
+                <Button className="bg-primary-600 hover:bg-primary-600/90 rounded-sm text-[16px] leading-[150%] py-2 px-2 sm:px-5 text-white cursor-pointer">Sign Up</Button>
               </a>
               <button className="flex items-center justify-center" onClick={toggleMobileMenu} aria-label="Toggle menu">
                 {mobileMenuOpen ? <X className="h-6 w-6 text-text-color" /> : <Menu className="h-6 w-6 text-gray-600" />}
@@ -126,9 +128,11 @@ const Navbar = () => {
               >
                 Link Four
               </Link>
-              <Button variant="outline" className="w-full">
-                Request Demo
+              <a href="https://app.purifyx.ai/signup" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="w-full cursor-pointer">
+                Login
               </Button>
+              </a>
             </div>
           </div>
         )}
