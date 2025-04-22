@@ -169,9 +169,15 @@ export const Pricing = () => {
     features,
     highlighted = false,
     badge,
+    planId,
+    onCheckout,
   }) => {
     return (
-      <div className="w-full min-w-[280px] mx-auto">
+      <div
+        className={`w-full min-w-[280px] h-full mx-auto flex flex-col transition-transform duration-300 origin-top ${
+          highlighted ? "lg:scale-[1.02] z-10" : "scale-100"
+        }`}
+      >
         <div
           className={`relative flex w-full flex-col overflow-hidden items-stretch justify-center px-4 sm:px-[42px] py-[22px] rounded-[11px] bg-gradient-to-b from-[#F3EBFF] via-white/10 to-white ${
             highlighted
@@ -181,7 +187,7 @@ export const Pricing = () => {
         >
           <div className="z-[1] flex w-full items-center justify-between">
             <div className="self-stretch flex-1">
-              <div className="text-text-color text-sm font-semibold leading-loose">
+              <div className="text-text-color text-[18px] font-semibold leading-loose">
                 {name}
               </div>
               <div className="text-[#878F9D] text-xs font-normal leading-loose mt-1">
@@ -197,11 +203,12 @@ export const Pricing = () => {
             )}
           </div>
         </div>
+  
         <div
-          className={`bg-white shadow-[0px_1px_2px_rgba(0,0,0,0.05)] border min-h-[445px] w-full mt-[22px] pb-[18px] rounded-[7px] border-solid ${
+          className={`bg-white flex-1 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] border min-h-[445px] w-full mt-[22px] pb-[18px] rounded-[7px] border-solid flex flex-col justify-between ${
             highlighted
               ? "border-[color:var(--Purple-Graident,#A49CE6)] border-2 rounded-lg"
-              : "border-[rgba(240,241,243,1)]"
+              : "border-[rgba(240,241,243,1)] h-[430px]"
           }`}
         >
           <div className="flex w-full flex-col items-stretch text-[27px] text-[#3E3941] font-semibold leading-[1.2] justify-center p-[22px] max-md:px-5">
@@ -214,18 +221,23 @@ export const Pricing = () => {
               )}
             </div>
           </div>
+  
           <div className="w-full text-[13px] font-medium text-center pb-5 px-5">
-            <button className="self-stretch flex-1 shrink basis-[0%] bg-[rgba(84,67,218,1)] hover:bg-[rgba(84,67,218,0.9)] transition-colors w-full text-white px-5 py-2 rounded-[5px]">
+            <button
+              onClick={() => onCheckout(planId)}
+              className="self-stretch flex-1 shrink basis-[0%] bg-[rgba(84,67,218,1)] cursor-pointer hover:bg-[rgba(84,67,218,0.9)] transition-colors w-full text-white px-5 py-2 rounded-[5px]"
+            >
               Get started
             </button>
-            <button className="self-stretch bg-white hover:bg-gray-50 transition-colors border border-[#D0D5DD] w-full text-[rgba(48,48,48,1)] mt-3.5 px-5 py-2 rounded-[5px] border-solid">
+            <button className="self-stretch bg-white hover:bg-gray-50 transition-colors cursor-pointer border border-[#D0D5DD] w-full text-[rgba(48,48,48,1)] mt-3.5 px-5 py-2 rounded-[5px] border-solid">
               Chat to sales
             </button>
           </div>
+  
           <div className="w-full">
             <div className="border border-[rgba(240,241,243,1)] min-h-0 w-full border-solid" />
             <div className="w-full mt-[18px] px-[18px]">
-              <div className="text-[rgba(84,67,218,1)] text-xs font-semibold leading-loose">
+              <div className="text-[rgba(84,67,218,1)] text-[18px] font-semibold leading-loose">
                 What's included:
               </div>
               <div className="flex w-full flex-col items-stretch text-[11px] text-black font-medium justify-center mt-[22px]">
@@ -244,6 +256,7 @@ export const Pricing = () => {
       </div>
     );
   };
+  
 
   // PricingHeader Component
   const PricingHeader = ({ title, subtitle }) => {
@@ -339,11 +352,11 @@ export const Pricing = () => {
             />
           </div>
 
-          <div className="min-h-[606px] w-full mt-6">
+          <div className="min-h-[606px] w-full mt-10">
             <div className="relative flex w-full flex-col overflow-hidden items-stretch justify-center px-4 sm:px-[47px] py-6 rounded-xl bg-gradient-to-b from-[#F3EBFF] via-white/10 to-white border border-[rgba(240,241,243,1)] border-solid">
               <div className="z-[1] flex w-full items-stretch justify-between flex-wrap">
                 <div className="min-w-60 flex-1 shrink basis-[0%] my-auto">
-                  <div className="text-[#3E3941] text-[15px] font-semibold leading-loose">
+                  <div className="text-[#3E3941] text-[18px] font-semibold leading-loose">
                     Enterprise
                   </div>
                   <div className="text-[#878F9D] text-[13px] font-normal leading-loose mt-1">
@@ -368,17 +381,17 @@ export const Pricing = () => {
                 </div>
               </div>
               <div className="w-full text-[13px] font-medium text-center pb-5 px-5">
-                <button className="self-stretch flex-1 shrink basis-[0%] bg-[rgba(84,67,218,1)] hover:bg-[rgba(84,67,218,0.9)] transition-colors w-full text-white px-5 py-2 rounded-[5px]">
+                <button className="self-stretch flex-1 shrink basis-[0%] bg-[rgba(84,67,218,1)] cursor-pointer hover:bg-[rgba(84,67,218,0.9)] transition-colors w-full text-white px-5 py-2 rounded-[5px]">
                   Get started
                 </button>
-                <button className="self-stretch bg-white hover:bg-gray-50 transition-colors border border-[#D0D5DD] w-full text-[rgba(48,48,48,1)] mt-3.5 px-5 py-2 rounded-[5px] border-solid">
+                <button className="self-stretch bg-white hover:bg-gray-50 transition-colors border cursor-pointer border-[#D0D5DD] w-full text-[rgba(48,48,48,1)] mt-3.5 px-5 py-2 rounded-[5px] border-solid">
                   Chat to sales
                 </button>
               </div>
               <div className="min-h-[239px] w-full">
                 <div className="border border-[rgba(240,241,243,1)] min-h-0 w-full border-solid" />
                 <div className="w-full mt-[18px] px-[18px]">
-                  <div className="text-[rgba(84,67,218,1)] text-xs font-semibold leading-loose">
+                  <div className="text-[rgba(84,67,218,1)] text-[18px] font-semibold leading-loose">
                     What's included:
                   </div>
                   <div className="flex w-full flex-col items-stretch text-[11px] text-black font-medium justify-center mt-[22px]">
